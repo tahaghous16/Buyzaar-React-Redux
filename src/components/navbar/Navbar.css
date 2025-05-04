@@ -1,0 +1,139 @@
+/* Navbar container styling */
+.navbar-container {
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #121212; /* Dark background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Wrapper for navbar elements */
+.navbar-wrapper {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Flex container for each section of the navbar */
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo styling */
+.navbar-logo {
+  font-weight: bold;
+  font-size: 32px;
+  color: #00ffcc; /* Neon cyan color */
+}
+
+.navbar-logo span {
+  color: #ff4081; /* Neon pink period */
+}
+
+/* Menu item styling */
+.navbar-menuItem {
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 20px;
+  color: #ffffff; /* White for menu items */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Menu item hover effect */
+.navbar-menuItem:hover {
+  color: #00ffcc; /* Neon cyan on hover */
+}
+
+/* Search bar styling */
+.navbar-searchContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 5px 10px;
+}
+
+.navbar-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 6px;
+  border-radius: 10px;
+  background: transparent;
+  color: #ffffff; /* White text for input */
+}
+
+/* Search icon color */
+.navbar-searchContainer .icon {
+  color: #ff4081; /* Neon pink for the icon */
+  font-size: 20px;
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Search icon hover effect */
+.navbar-searchContainer .icon:hover {
+  color: #00ffcc; /* Neon cyan on hover */
+}
+
+/* Cart badge styling */
+.cart-badge {
+  background-color: #ff4081; /* Neon pink badge */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Adjust navbar height and padding for mobile */
+  .navbar-container {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar-wrapper {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* Reduce logo size on mobile */
+  .navbar-logo {
+    font-size: 22px;
+  }
+
+  .navbar-logo span {
+    font-size: 26px; /* Adjust size of period */
+    color: #ff4081; /* Neon pink for the period */
+  }
+
+  /* Hide search input on mobile */
+  .navbar-searchContainer {
+    display: none;
+  }
+
+  /* Adjust menu item font size on mobile */
+  .navbar-menuItem {
+    font-size: 14px;
+    margin-left: 15px;
+    color: #ffffff;
+  }
+
+  /* Align right section in mobile */
+  .navbar-right {
+    justify-content: flex-end;
+  }
+}
